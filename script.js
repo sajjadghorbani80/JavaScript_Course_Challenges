@@ -74,3 +74,14 @@ else
 */
 
 //------------------------------
+
+//Code Challenge #4
+//tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+/*let tip = 0;
+let billValue = prompt("enter the bill value:",100);
+tip = billValue >= 50 && billValue <=300 ? (billValue * 15) / 100 : (billValue * 20) / 100;
+
+console.log(`The bill was ${billValue}, the tip was ${tip}, and the total value
+${billValue - tip}`);*/
+
