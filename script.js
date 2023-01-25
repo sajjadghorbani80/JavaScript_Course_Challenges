@@ -1,3 +1,4 @@
+//JavaScript Fundamentals – Part 1
 //Code Challenge #1
 //Mark and John are trying to compare their BMI (Body Mass Index)
 /*
@@ -83,5 +84,49 @@ let billValue = prompt("enter the bill value:",100);
 tip = billValue >= 50 && billValue <=300 ? (billValue * 15) / 100 : (billValue * 20) / 100;
 
 console.log(`The bill was ${billValue}, the tip was ${tip}, and the total value
-${billValue - tip}`);*/
+${billValue + tip}`);*/
 
+//-------------------------------
+//JavaScript Fundamentals – Part 2
+//Code Challenge #1
+
+/*let calcAverage = (scoreOne, scoreTwo, scoreThree)=> (scoreOne + scoreTwo + scoreThree) / 3;
+
+let avgDolphins = calcAverage(+prompt("first Dolphins score"), +prompt("second Dolphins score"), +prompt("third Dolphins score"))
+let avgKoalas = calcAverage( +prompt("first Koalas score"), +prompt("second Koalas score"), +prompt("third Koalas score"))
+
+function checkWinner(avgDolphins , avgKoalas){
+    if(avgDolphins > avgKoalas && avgDolphins >= avgKoalas * 2)
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+
+    else if(avgDolphins < avgKoalas && avgKoalas >= avgDolphins * 2)
+        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+    
+    else
+        console.log("no team win");
+}       
+
+
+checkWinner(avgDolphins, avgKoalas);
+*/
+
+//----------------------------------
+
+//Coding Challenge #2
+/*
+let bills = [125,555,44];
+let tips = [];
+let total = [];
+
+function calcTip(billValue){
+    return billValue >= 50 && billValue <=300 ? (billValue * 15) / 100 : (billValue * 20) / 100;
+}
+
+for (let i = 0; i < bills.length; i++) {
+    tips[i] =  calcTip(bills[i]);
+    total[i] = bills[i] + tips[i];
+    
+}
+
+console.log(tips);
+console.log(total);*/
