@@ -130,3 +130,35 @@ for (let i = 0; i < bills.length; i++) {
 
 console.log(tips);
 console.log(total);*/
+
+//------------------------------------
+
+//Coding Challenge #3
+
+/*
+const MarkObj = {
+    "fullName": "Mark Miller",
+    "mass" : 92,
+    "height" : 1.95,
+    calcBMI(){
+        this.BMI =  this.mass / (this.height **2);
+        return this.BMI;
+    }
+}
+
+const JohnObj = {
+    "fullName": "John Smith",
+    "mass" : 78,
+    "height" : 1.69,
+    calcBMI(){
+        this.BMI =  this.mass / (this.height **2);
+        return this.BMI;
+    }
+}
+
+if(MarkObj.calcBMI() > JohnObj.calcBMI())
+    console.log(`Mark's BMI (${MarkObj.BMI}) is higher than John's (${JohnObj.BMI})!`);
+else if(MarkObj.calcBMI() < JohnObj.calcBMI())
+    console.log(`John's BMI (${JohnObj.BMI}) is higher than Mark's (${MarkObj.BMI})!`);
+else
+    console.log(`equal ${MarkObj.BMI}`);*/
