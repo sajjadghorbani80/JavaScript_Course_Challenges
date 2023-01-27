@@ -162,3 +162,32 @@ else if(MarkObj.calcBMI() < JohnObj.calcBMI())
     console.log(`John's BMI (${JohnObj.BMI}) is higher than Mark's (${MarkObj.BMI})!`);
 else
     console.log(`equal ${MarkObj.BMI}`);*/
+
+
+//------------------------------------
+
+//Coding Challenge #4
+
+let bills = [125,555,44];
+let tips = [];
+let totals = [];
+
+function calcTip(billValue){
+    return billValue >= 50 && billValue <=300 ? (billValue * 15) / 100 : (billValue * 20) / 100;
+}
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i] + tips[i]);
+    
+}
+
+function calcAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage(totals));
