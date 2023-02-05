@@ -168,7 +168,7 @@ else
 
 //Coding Challenge #4
 
-let bills = [125,555,44];
+/*let bills = [125,555,44];
 let tips = [];
 let totals = [];
 
@@ -190,4 +190,21 @@ function calcAverage(arr) {
     return sum / arr.length;
 }
 
-console.log(calcAverage(totals));
+console.log(calcAverage(totals));*/
+
+//------------------------------------------------
+//Developer Skills & Editor Setup
+//coding challenge #1
+
+/*function printForecast(arr){
+    let output = "";
+    for (let i = 0; i < arr.length; i++) {
+        const temperature = arr[i];
+
+        output = output.concat(`${temperature}ºC in ${i+1} days ...`)
+    }
+
+    console.log(output);
+}
+
+printForecast([17, 21, 23]);*/
