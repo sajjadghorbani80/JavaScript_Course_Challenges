@@ -208,3 +208,77 @@ console.log(calcAverage(totals));*/
 }
 
 printForecast([17, 21, 23]);*/
+
+//------------------------------------------------
+//Data Structures, Modern Operators and Strings
+//Coding Challenge #1
+
+/*const game = {
+    team1: 'Bayern Munich',
+    team2: 'Borrussia Dortmund',
+    players: [
+    [
+    'Neuer',
+    'Pavard',
+    'Martinez',
+    'Alaba',
+    'Davies',
+    'Kimmich',
+    'Goretzka',
+    'Coman',
+    'Muller',
+    'Gnarby',
+    'Lewandowski',
+    ],
+    [
+    'Burki',
+    'Schulz',
+    'Hummels',
+    'Akanji',
+    'Hakimi',
+    'Weigl',
+    'Witsel',
+    'Hazard',
+    'Brandt',
+    'Sancho',
+    'Gotze',
+    ],
+    ],
+    score: '4:0',
+    scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+    'Hummels'],
+    date: 'Nov 9th, 2037',
+    odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+    },
+    };
+
+let Players1 = game.players[0];
+let Players2 = game.players[1];
+let gk = Players1[0];
+let fieldPlayers = Players1.slice(1);
+let allPlayers = [...Players1,...Players2];
+console.log(allPlayers);
+let players1Final = [...Players1, "Thiago", "Coutinho", "Perisic"];
+let team1 = game.odds.team1;
+let draw = game.odds.x;
+let team2 = game.odds.team2;
+
+function printGoals (...names){
+    names.forEach((value) => console.log(value));
+    console.log(names.length);
+}
+
+//printGoals('Davies', 'Muller', 'Lewandowski' , 'Kimmich');
+printGoals(...game.scored);
+
+let lowerOdd = Object.values(game.odds).sort((a, b) => a - b)[0];
+
+function getKeyByValue(object, value) {
+    return Object.keys(object).find(key => object[key] === value);
+}
+
+let winner = getKeyByValue(game.odds,lowerOdd);
+console.log(game[winner]);*/
