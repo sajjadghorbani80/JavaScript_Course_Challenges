@@ -357,7 +357,7 @@ console.log(Object.entries(scorers));*/
 //-----------------------------------------
 //Coding Challenge #3
 
-const gameEvents = new Map([
+/*const gameEvents = new Map([
     [17, '⚽ GOAL'],
     [36, '🔁 Substitution'],
     [47, '⚽ GOAL'],
@@ -388,4 +388,20 @@ for (const item of gameEvents.entries()) {
 
     output = output.concat(` ${item[0]}: ${item[1]}`);
     console.log(output);
-}
+}*/
+
+//--------------------------------------
+//Coding Challenge #4
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+document.querySelector("button").addEventListener('click',function(){
+    let text = document.getElementsByTagName("textarea")[0].value;
+    let arr = text.split("\n");
+    for (const item of arr) {
+        let word = item.split("_");
+        let camel = word[0].toLowerCase()+word[1][0].toUpperCase()+word[1].slice(1).toLowerCase();
+        console.log(camel.trim());
+    }
+});
