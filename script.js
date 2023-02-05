@@ -34,7 +34,7 @@ if(markHigherBMI)
     console.log(`Mark's BMI ${(MarkBMI)} is higher than John's ${(JohnBMI)}!`)
 else
     console.log(`John's BMI ${(JohnBMI)} is higher than Mark's ${(MarkBMI)}!`) */
-    
+
 //-----------------------------
 
 //Code Challenge #3
@@ -286,7 +286,7 @@ console.log(game[winner]);*/
 //----------------------------------------
 //Coding Challenge #2
 
-const game = {
+/*const game = {
     team1: 'Bayern Munich',
     team2: 'Borrussia Dortmund',
     players: [
@@ -352,4 +352,40 @@ for (const player of game.scored) {
         scorers[player]++;
 }
 
-console.log(Object.entries(scorers));
+console.log(Object.entries(scorers));*/
+
+//-----------------------------------------
+//Coding Challenge #3
+
+const gameEvents = new Map([
+    [17, '⚽ GOAL'],
+    [36, '🔁 Substitution'],
+    [47, '⚽ GOAL'],
+    [61, '🔁 Substitution'],
+    [64, '🔶 Yellow card'],
+    [69, '🔴 Red card'],
+    [70, '🔁 Substitution'],
+    [72, '🔁 Substitution'],
+    [76, '⚽ GOAL'],
+    [80, '⚽ GOAL'],
+    [92, '🔶 Yellow card'],
+]);
+
+let events = new Set(gameEvents.values());
+
+gameEvents.delete(64);
+
+let time = [...gameEvents.keys()].pop();
+console.log(`An event happened, on
+average, every ${time / gameEvents.size} minutes`);
+
+for (const item of gameEvents.entries()) {
+    let output = " ";
+    if(item[0] <= 45)
+       output = output.concat("[FIRST HALF]");
+    else
+    output = output.concat("[Second HALF]");
+
+    output = output.concat(` ${item[0]}: ${item[1]}`);
+    console.log(output);
+}
