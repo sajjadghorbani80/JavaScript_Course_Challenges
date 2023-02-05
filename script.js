@@ -282,3 +282,74 @@ function getKeyByValue(object, value) {
 
 let winner = getKeyByValue(game.odds,lowerOdd);
 console.log(game[winner]);*/
+
+//----------------------------------------
+//Coding Challenge #2
+
+const game = {
+    team1: 'Bayern Munich',
+    team2: 'Borrussia Dortmund',
+    players: [
+    [
+    'Neuer',
+    'Pavard',
+    'Martinez',
+    'Alaba',
+    'Davies',
+    'Kimmich',
+    'Goretzka',
+    'Coman',
+    'Muller',
+    'Gnarby',
+    'Lewandowski',
+    ],
+    [
+    'Burki',
+    'Schulz',
+    'Hummels',
+    'Akanji',
+    'Hakimi',
+    'Weigl',
+    'Witsel',
+    'Hazard',
+    'Brandt',
+    'Sancho',
+    'Gotze',
+    ],
+    ],
+    score: '4:0',
+    scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+    'Hummels'],
+    date: 'Nov 9th, 2037',
+    odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+    },
+    };
+
+game.scored.forEach((name,index) => console.log(`Goal ${index+1}: ${name}`) )
+let averageOdds = 0;
+for (const value of Object.values(game.odds)) {
+    averageOdds += value;
+}
+
+console.log(averageOdds/ Object.keys(game.odds).length);
+
+for (const item of Object.entries(game.odds)) {
+    if(item[0] == "x")
+        console.log(`Odd of draw: ${item[1]}`);
+    else
+        console.log(`Odd of Victory ${game[item[0]]}: ${item[1]}`);
+}
+
+let scorers = {};
+
+for (const player of game.scored) {
+    if(!(player in scorers))
+        scorers[player] = 1;
+    else
+        scorers[player]++;
+}
+
+console.log(Object.entries(scorers));
