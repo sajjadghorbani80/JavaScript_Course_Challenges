@@ -392,7 +392,7 @@ for (const item of gameEvents.entries()) {
 
 //--------------------------------------
 //Coding Challenge #4
-
+/*
 document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
 
@@ -407,4 +407,44 @@ document.querySelector("button").addEventListener('click',function(){
         }
         console.log(camel.trim());
     }
-});
+});*/
+
+//-----------------------------------------
+//A Closer Look at Functions
+//Coding Challenge #1
+
+const poll = {
+    question: "What is your favourite programming language?",
+    options: ["0: JavaScript", "1: Python", "2: Rust", "3:C++"],
+    // This generates [0, 0, 0, 0]. More in the next section!
+    answers: new Array(4).fill(0),
+};
+
+poll.registerNewAnswer = function (){
+    let answer = +prompt("What is your favourite programming language?\n0: JavaScript\n1: Python\n2: Rust\n3: C++")
+    if(!isNaN(answer) && answer >= 0 && answer < poll.options.length){
+        poll.answers[answer]++;
+    }
+    else
+        alert("please enter valid number");
+    
+}
+
+const button = document.createElement("button");
+button.innerText ="Answer poll";
+document.body.append(button);
+
+document.querySelector("button").addEventListener('click', function(){
+    poll.registerNewAnswer();
+    let func = displayResults.bind(poll);
+    func("string");
+})
+
+function displayResults(type="array"){
+    if(type=="array")
+        console.log(this.answers);
+    else if(type=="string")
+        console.log(`Poll results are ${this.answers}`);
+}
+
+displayResults.call({answers : [1,5,6,8]},"string")
