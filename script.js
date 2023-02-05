@@ -399,9 +399,12 @@ document.body.append(document.createElement('button'));
 document.querySelector("button").addEventListener('click',function(){
     let text = document.getElementsByTagName("textarea")[0].value;
     let arr = text.split("\n");
-    for (const item of arr) {
-        let word = item.split("_");
-        let camel = word[0].toLowerCase()+word[1][0].toUpperCase()+word[1].slice(1).toLowerCase();
+    for (let i = 0; i < arr.length; i++) {
+        let word = arr[i].split("_");
+        let camel = word[0].toLowerCase()+word[1][0].toUpperCase()+word[1].slice(1).toLowerCase()+"\t";
+        for (let j = 0; j < i+1; j++) {
+            camel = camel.concat("✅");        
+        }
         console.log(camel.trim());
     }
 });
